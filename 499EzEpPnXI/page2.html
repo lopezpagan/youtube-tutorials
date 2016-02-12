@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page 2</title>
+<style>
+	html, body {
+		background: #0CF;
+		color: #333;	
+	}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	
+	$('#btn').on('click', function(){
+		alert($('#name').val());
+	});
+});
+</script>
+</head>
+
+<body>
+<h3> Page 2</h3>
+Nombre: <br/>
+<input type="text" id="name"><br/>
+<input type="button" id="btn" value="Enviar">
+</body>
+</html>

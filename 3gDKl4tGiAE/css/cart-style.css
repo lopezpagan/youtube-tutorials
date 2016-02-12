@@ -1,0 +1,170 @@
+/* CSS Document */
+* {
+	font-family: Arial, Helvetica, sans-serif;	
+	font-size: 12px;
+}
+a {
+	color: #000;
+	text-decoration: underline;	
+}
+a:hover {
+	color: #333;
+	text-decoration: none;	
+}
+.oddcolor {
+	background-color: #eee;	
+}
+.evencolor {
+	background-color: #fff;		
+}
+.row {
+	padding: 2px;	
+	min-height: 20px;
+	margin: auto;
+	display: block;
+	clear: both;
+	position: relative;
+}
+.row-item {
+	padding: 5px;	
+}
+.action-link {
+	margin: 20px 0;	
+	font-size: 14px;
+}
+.list-text-title {
+	font-weight: bold;
+	background-color: #333;
+	color: #fff;
+		
+}
+.list-text-caption {
+	font-size: 11px;
+	font-weight: lighter;
+}
+.list-text-desc {
+	font-size: 10px;
+	font-weight: lighter;
+	font-style: italic;	
+}
+.col1 {
+	width: 7%;
+	float: left;
+		
+}
+.col2 {
+	width: 15%;
+	float: left;
+		
+}
+.col3 {
+	width: 25%;
+	float: left;	
+}
+.col4 {
+	width: 33%;
+	float: left;	
+}
+.col12 {
+	width: 100%;
+	float: left;	
+}
+.form {
+	max-width: 500px;
+	margin: auto;
+	display: block;	
+}
+.nav {
+	max-width: 500px;
+	margin: 15px auto;
+	display: block;
+	font-size: 11px;
+	height: 15px;
+}
+.form-title {
+	font-weight: bold;	
+}
+.border-rounded {
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+}
+.form-input {
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+}
+.form-input input[type="text"], .form-input select, .form-input textarea, .form-input input[type="password"] {
+	
+	font-size: 16px;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #666;
+	border: 1px #e5e5e5 solid;
+	
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	
+	width: 98%;
+	padding: 1%;
+	
+}
+.button-submit {
+	border: 1px solid #e5e5e5;
+	color: #fff;
+	background-color: #666;
+	padding: 5px;
+	
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	
+	cursor: pointer;
+		
+}
+.button-submit:hover {
+	border: 1px solid #e5e5e5;
+	color: #666;
+	background-color: #e5e5e5;
+	padding: 5px;
+	
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	
+	cursor: pointer;
+		
+}
+
+hr {
+	border: 1px #e5e5e5 dotted;
+	clear: both;
+	display: block;
+	margin: 5px 0;		
+}
+h1 {
+	font-size: 24px;	
+	display: block;
+
+}
+h2 {
+	font-size: 22px;	
+	display: block;
+	
+}
+h3 {
+	
+}
+h4 {
+	
+}
+h5 {
+	
+}
+h6 {
+	
+}
+.center { text-align: center; }
+.right { text-align: right; }
+.left { text-align: left; }

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF8">
+<title>Cómo Cargar Una Página Dentro de un DIV con jQuery </title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+// Debido a las restricciones de los navegadores, la mayoría de los pedidos estan sujetas a la política de origen en el mismo lugar "same origin policy", o sea, que solo podrás cargar páginas desde el mismo dominio y no a otro dominio.  
+//Para hacer esto tendrás que usar los llamados iFrames ó creando un proxy puedes ver el video aquí.  http://www.youtube.com/watch?v=499EzEpPnXI
+	$(document).ready(function(e) {
+		$('#LoadPage').load('page2.html', function(data) {
+
+			$(this).html(data);
+
+		});
+	});
+</script>
+<style>
+	#LoadPage {
+
+		width: 100%;
+		margin: 10px auto;
+		background-color: #e5e5e5;
+		height: 550px;
+		overflow-y: scroll;
+
+	}
+</style>
+</head>
+<body>
+	<h1>Cómo Cargar Una Página Dentro de un DIV con jQuery</h1>
+	<p>Debido a las restricciones de los navegadores, la mayoría de los pedidos estan sujetas a la política de origen en el mismo lugar &quot;same origin policy&quot;, o sea, que solo podrás cargar páginas desde el mismo dominio y no a otro dominio. <br>
+	Para hacer esto tendrás que usar los llamados iFrames ó creando un proxy puedes ver el video aquí.  <a href="http://www.youtube.com/watch?v=499EzEpPnXI">http://www.youtube.com/watch?v=499EzEpPnXI</a></p>
+	<div id="LoadPage">Content for id "LoadPage" Goes Here</div>
+	<p>&nbsp;</p>
+</body>
+</html>

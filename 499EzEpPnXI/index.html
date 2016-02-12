@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<style>
+	.menu {
+		width: 20%;
+		height: 25px;
+		float: left;
+		padding: 10px;	
+		text-align: center;
+		background: #fff;
+		color: #000;
+	}
+	.menu:hover {
+		background: #000;
+		color: #fff;	
+	}
+	#content {
+		clear: both;
+		background: #e5e5e5;
+		padding: 0;
+		overflow-y: scroll;
+		width: 100%;
+		height: 600px;
+		border: 0;
+	}
+</style>
+</head>
+<body>
+<div id="main">
+	<div id="nav">
+		<div id="menu1" class="menu">Page 1</div>
+		<div id="menu2" class="menu">Page 2</div>
+		<div id="menu3" class="menu">Google</div>		
+	</div>
+	<iframe id="content" src="http://google.com">iFrames not supported</iframe>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script>
+	$(document).ready(function(e) {
+		$('#menu1').on('click', function(){
+			
+			$('#content').attr('src', 'page1.html');
+		});
+		$('#menu2').on('click', function(){
+			$('#content').attr('src', 'page2.html');
+			
+		});
+		$('#menu3').on('click', function(){		
+			$('#content').attr('src', 'http://yahoo.com');
+			
+		});
+		
+		
+	});
+</script>
+</body>
+</html>
