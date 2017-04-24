@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Nivel Intermedio</title>
+	<meta name="Author" content=""/>
+	<style>
+        select { width: 300px; }
+        
+    
+    </style>
+</head>
+<body>
+
+<h1>Nivel Intermedio</h1>
+<form>
+<p> Pueblos 1: 
+    <select id="pueblos-1" onchange="selectPueblos()">
+        <option value="1">Dorado</option>
+        <option value="2">Bayamón</option>
+        <option value="3" selected>San Juan</option>
+        <option value="4">Arecibo</option>
+        <option value="5">Ponce</option>
+        <option value="6">Isabela</option>
+    </select>
+</p>
+<p>Pueblos 2:
+    <select id="barrios">
+    <option>No hay nada</option>
+    </select>
+</p>
+</form>
+
+<script>
+    
+    function selectPueblos() {
+        var pueblo = document.getElementById('pueblos-1');
+        //console.log('Seleccionaste: '+pueblo.value);
+        
+        var results = getBarrios(pueblo.value);
+        
+        if (results.length > 0 && results != undefined) {  
+            console.log(results);
+            document.getElementById('barrios').innerHTML = results;
+        } else {
+            console.log('No hay nada');
+        }
+    }
+    
+    function getBarrios(param) {
+        var results = '';
+        
+        if (param == 1) {
+            results = '<option>Mameyal</option>';
+            results += '<option>San Antonio</option>';
+        } else if (param == 2) {
+            results = '<option>Sierra Linda</option>';
+            results += '<option>Santa Rosa</option>';            
+        } else {
+            results = '<option>NO HAY NADA.</option>';          
+        }
+        
+        return results; 
+    }
+</script>
+</body>
+</html>
