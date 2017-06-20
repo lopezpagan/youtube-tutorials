@@ -1,4 +1,4 @@
-<?php require_once('../Connections/cn.php'); ?>
+<?php require('../Connections/cn.php'); ?>
 <?php
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
@@ -37,22 +37,29 @@ if (isset($_SERVER['QUERY_STRING'])) {
 }
 
 if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
-  $insertSQL = sprintf("INSERT INTO products (product_name, product_seo, product_price, product_category_id, product_status) VALUES (%s, %s, %s, %s, %s)",
+	
+  if ( !checkProductName($_POST['product_name']) ) {
+  		$insertSQL = sprintf("INSERT INTO products (product_name, product_seo, product_price, product_category_id, product_status) VALUES (%s, %s, %s, %s, %s)",
                        GetSQLValueString($_POST['product_name'], "text"),
                        GetSQLValueString($_POST['product_seo'], "text"),
                        GetSQLValueString($_POST['product_price'], "double"),
                        GetSQLValueString($_POST['product_category_id'], "int"),
                        GetSQLValueString($_POST['product_status'], "int"));
 
-  mysql_select_db($database_cn, $cn);
-  $Result1 = mysql_query($insertSQL, $cn) or die(mysql_error());
+  		mysql_select_db($database_cn, $cn);
+  		$Result1 = mysql_query($insertSQL, $cn) or die(mysql_error());
 
-  $insertGoTo = "product-list.php";
-  if (isset($_SERVER['QUERY_STRING'])) {
-    $insertGoTo .= (strpos($insertGoTo, '?')) ? "&" : "?";
-    $insertGoTo .= $_SERVER['QUERY_STRING'];
+	  $insertGoTo = "product-list.php";
+	  if (isset($_SERVER['QUERY_STRING'])) {
+		$insertGoTo .= (strpos($insertGoTo, '?')) ? "&" : "?";
+		$insertGoTo .= $_SERVER['QUERY_STRING'];
+	  }
+	  header(sprintf("Location: %s", $insertGoTo));
+  } else {
+	  
+	echo("<script>alert('Product name already exists!'); history.back(-1); </script>");  
+	return false;
   }
-  header(sprintf("Location: %s", $insertGoTo));
 }
 
 mysql_select_db($database_cn, $cn);
@@ -60,6 +67,22 @@ $query_rsCategories = "SELECT categories.category_id, categories.category_name F
 $rsCategories = mysql_query($query_rsCategories, $cn) or die(mysql_error());
 $row_rsCategories = mysql_fetch_assoc($rsCategories);
 $totalRows_rsCategories = mysql_num_rows($rsCategories);
+
+function checkProductName($colname_rsProductName) {
+	
+	require('../Connections/cn.php');
+	mysql_select_db($database_cn, $cn);
+	$query_rsProductName = sprintf("SELECT product_name FROM products WHERE product_name = %s", GetSQLValueString($colname_rsProductName, "text"));
+	$rsProductName = mysql_query($query_rsProductName, $cn) or die(mysql_error());
+	$row_rsProductName = mysql_fetch_assoc($rsProductName);
+	$totalRows_rsProductName = mysql_num_rows($rsProductName);
+	
+	if ( empty($totalRows_rsProductName)) {
+		return false;
+	} else { 
+		return true;
+	}
+}
 ?>
 <link rel="stylesheet" type="text/css" href="css/cart-style.css">
 
@@ -114,4 +137,6 @@ $totalRows_rsCategories = mysql_num_rows($rsCategories);
 </div>
 <?php
 mysql_free_result($rsCategories);
+
+mysql_free_result($rsProductName);
 ?>
