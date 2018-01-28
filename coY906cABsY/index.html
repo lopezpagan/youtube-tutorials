@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <style>
+      body {
+        background-color: #fdfdfd;
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+      
+      .main {
+        background-image: url(bg.png);
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+      
+      #page1 {
+        position: relative;
+        background-image: url(bg.png);
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+      
+      #page2 {
+        position: relative;
+        background-color: red;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+      
+      #page3 {
+        position: relative;
+        background-color: blue;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+      
+      .icon {        
+        color: white;
+        /*border: 1px solid white;*/
+        text-align: center;
+        width: 50px;
+        height: 50px;
+      }
+      
+      .main .icon {
+        position: absolute;
+        left: 50%;
+        margin-left: -25px;
+        bottom: 10px;
+      }
+      
+      h1 { text-align: center; color: white; }
+      form { text-align: center;}
+    </style>
+</head>
+<body>
+  <div class="main">
+    
+    <div id="page1" class="page">
+      <header>
+        <h1>HOME PAGE</h1>
+      </header>
+      <div class="icon">
+        <a href="#page2">
+          <img src="star.png" alt="">
+        </a>
+      </div>
+    </div>
+    
+    <div id="page2" class="page">
+      <header>
+        <h1>ABOUT PAGE</h1>
+      </header>
+      <div class="icon">
+        <a href="#page3">
+          <img src="star.png" alt="">
+        </a>
+      </div>
+    </div>
+    
+    <div id="page3" class="page">
+      <header>
+        <h1>CONTACT US</h1>
+      </header>
+      <div>
+        <form action="">
+          <label for="">Nombre</label><br>
+          <input type="text"><br>
+          
+          <label for="">Apellidos</label><br>
+          <input type="text"><br><br>
+          <button>Enviar</button>
+        </form>
+      </div>
+      <div class="icon">
+        <a href="#page1">
+          <img src="star.png" alt="">
+        </a>
+      </div>
+    </div>
+    
+    
+  </div>
+</body>
+</html>
