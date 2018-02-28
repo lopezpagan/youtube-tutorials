@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Responsive</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <style>
+        body { 
+            background-color: #444; margin: 0; padding: 0; font-family: arial;
+        }
+        
+      .main {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+      
+      .video-box {
+        width: 100%;
+        max-width: 720px;
+        height: auto;
+        margin: 100px auto 0;
+      }
+      .video {
+        position: relative;
+        height: 0;
+        padding-top: 56.25%;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      
+      .video video {
+        width: 100%;
+        height: auto;
+      }
+      
+      .video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        
+        <div class="video-box">
+          <div class="video">
+            <video width="400" controls>
+              <source src="video.mp4" type="video/mp4"/>
+              <source src="video.ogg" type="video/ogg"/>
+              Tu navegador no soporta videos en HTML5.
+            </video>
+            
+            <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/coY906cABsY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+          </div>
+        </div>
+        
+    </div>
+</body>
+</html>
