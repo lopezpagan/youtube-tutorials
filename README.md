@@ -52,7 +52,7 @@ Una vez descargas el archivo podrás ver que está subdividido por directorios c
 <b>Proyecto: ¿Cómo Alinear Imagen en DIV Verticalmente con CSS y HTML?</b>
 <a href="https://github.com/lopezpagan/youtube-tutorials/tree/master/gnj6e6Hmfa0" target="_blank">Código Fuente</a> | <a href="https://www.youtube.com/watch?v=gnj6e6Hmfa0" target="_blank">Ver Video</a>
 
-<b>Proyecto:</b>
+<b>Proyecto: ¿Cómo Listar, añadir, editar y borrar records de una tabla con PHP y Dreamweaver?</b>
 <a href="https://github.com/lopezpagan/youtube-tutorials/tree/master/ieeRfZEFOAc" target="_blank">Código Fuente</a> | <a href="https://www.youtube.com/watch?v=ieeRfZEFOAc" target="_blank">Ver Video</a>
 
 <b>Proyecto: ¿Cómo crear un campo de seleccion en HTML y PHP - Básico/Intermedio/Avanzado?</b>
@@ -68,7 +68,7 @@ Una vez descargas el archivo podrás ver que está subdividido por directorios c
 <b>Proyecto: ¿Cómo Borrar Records de una Tabla y Añadirlos en Otra con PHP?</b>
 <a href="https://github.com/lopezpagan/youtube-tutorials/tree/master/oofNiKO0e6U" target="_blank">Código Fuente</a> | <a href="https://www.youtube.com/watch?v=oofNiKO0e6U" target="_blank">Ver Video</a>
 
-<b>Proyecto:</b>
+<b>Proyecto: ¿Cómo Calcular las Horas Trabajadas para un Sistema de Ponches en PHP?</b>
 <a href="https://github.com/lopezpagan/youtube-tutorials/tree/master/pjxulgT9rRY" target="_blank">Código Fuente</a> | <a href="https://www.youtube.com/watch?v=pjxulgT9rRY" target="_blank">Ver Video</a>
 
 <b>Proyecto: ¿Cómo Hacer un Video Responsive con HTML y CSS?</b>
